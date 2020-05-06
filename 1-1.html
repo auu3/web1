@@ -3,6 +3,7 @@
 <head>
   <title>WEB1 - 정리</title>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164553945-1"></script>
 <script>
@@ -13,94 +14,110 @@
   gtag('config', 'UA-164553945-1');
 </script>
 
+<style>
+#grid ol{
+  width: 140px;
+  margin: 0;
+}
+#article ol{
+  display: inline;
+  border: none;
+}
+#article{
+  padding-left: 24px;
+}
+</style>
+
 </head>
 <body>
   <h1><a href="index.html">WEB</a></h1>
+
+<div id="grid">
   <ol>
     <li><a href="1.html">HTML</a></li>
     <li><a href="2.html">CSS</a></li>
     <li><a href="3.html">JavaScript</a></li>
     <li><a href="checkbox.html">체박부터 부록까지</a></li>
-<br>
+  <br>
   <ul>
     <li><a href="1-1.html">HTML정리</a></li>
-  <ul>
-
+  </ul>
   </ol>
-<br>
-<p>
-  <strong>200425</strong>
-<br>
+<div id="article">
+    <h2 style="font-size: 27px;">정리</h2>
 
-<br>
-<strong>태그</strong>
+    <br>
+    <p>
+    <strong>태그_200425</strong>
+      <ol>
+        <li>강조
+          <br>< strong > < /strong >
+        <li>밑줄
+          <br>< u > < /u>
+        <li>제목
+          <br>< h1 ~ h6 > < /h1 ~ h6>
+        <li>줄바꿈
+          <br>< br >
+        <li>단락
+          <br>< p > < /p >
+        <li>이미지
+          <br>< img src="(이미지파일 이름.파일형식)">
+        <li>이미지 크기 수정
+          <br>< img src="(이미지파일 이름.파일형식)" width="(숫자 or %)">
+        <li>목록
+          <br>부모
+          <br>- 숫자 X < ul > < /ul >
+          <br>- 숫자 O < ol > < /ol >
+          <br>자식
+          <br>- < li >
+        <li>웹페이지 제목
+          <br>< title > < /title >
+        <li>웹브라우저야 이 파일을 열때는 utf-8 로 열어
+          <br>< meta charset="utf-8" >
+        <li>몸통(본문)
+          <br>< body > < /body >
+        <li>머리(본문설명)
+          <br>< head > < /head >
+        <li>최고위태그
+          <br>< html > < /html >
+        <li>이 문서는 html 입니다
+          <br>< !doctype html >
+        <li>링크
+          <br>< a href="(링크)" >(링크걸말)< /a >
+          <br>새탭으로열기 < a href="(링크)" target="_blank" >(링크걸말)< /a >
+          <br>링크미리보기 < a href="(링크)" title="(미리보기)" >(링크걸말)< /a >
+        <li>체크박스
+          <br>< input type="checkbox" >
+        <li>동영상 삽입
+          <br>< iframe width="(가로높이)" height="(세로높이)" src="(링크)" >< /iframe >
+          <br>쉽게는 유투브 영상 - 공유 - 퍼가기 - 코드복사 - 붙여넣기
+        </ol>
+      </p>
 
-<ol>
-  <li>강조
-    <br>< strong > < /strong >
-  <li>밑줄
-    <br>< u > < /u>
-  <li>제목
-    <br>< h1 ~ h6 > < /h1 ~ h6>
-  <li>줄바꿈
-    <br>< br >
-  <li>단락
-    <br>< p > < /p >
-  <li>이미지
-    <br>< img src="(이미지파일 이름.파일형식)">
-  <li>이미지 크기 수정
-    <br>< img src="(이미지파일 이름.파일형식)" width="(숫자 or %)">
-  <li>목록
-    <br>부모
-    <br>- 숫자 X < ul > < /ul >
-    <br>- 숫자 O < ol > < /ol >
-    <br>자식
-    <br>- < li >
-  <li>웹페이지 제목
-    <br>< title > < /title >
-  <li>웹브라우저야 이 파일을 열때는 utf-8 로 열어
-    <br>< meta charset="utf-8" >
-  <li>몸통(본문)
-    <br>< body > < /body >
-  <li>머리(본문설명)
-    <br>< head > < /head >
-  <li>최고위태그
-    <br>< html > < /html >
-  <li>이 문서는 html 입니다
-    <br>< !doctype html >
-  <li>링크
-    <br>< a href="(링크)" >(링크걸말)< /a >
-    <br>새탭으로열기 < a href="(링크)" target="_blank" >(링크걸말)< /a >
-    <br>링크미리보기 < a href="(링크)" title="(미리보기)" >(링크걸말)< /a >
-  <li>체크박스
-    <br>< input type="checkbox" >
-  <li>동영상 삽입
-    <br>< iframe width="(가로높이)" height="(세로높이)" src="(링크)" >< /iframe >
-    <br>쉽게는 유투브 영상 - 공유 - 퍼가기 - 코드복사 - 붙여넣기
-</ol>
+      <br>
+      <p><strong>사이트</strong>
+        <ol>
+          <li>깃헙
+            <br>https://github.com/
+            <br>파일 올려두면 누구든 어디서든 내 웹페이지 확인 가능
+          <li>비트나미
+            <br>https://bitnami.com/
+            <br>아파치(웹서버) 를 위해 까는 프로그램
+          <li>127.0.0.1
+            <br>자신의 컴퓨터 IP
+          <li>디스커스
+            <br>https://disqus.com/
+            <br>댓글 추가 코드 제공
+          <li>타크
+            <br>https://www.tawk.to/
+            <br>채팅 추가 코드 제공
+          <li>웹사이트 분석기
+            <br>https://analytics.google.com/
+          </ol>
+        </p>
 
-<br>
-<strong>사이트</strong>
-
-<ol>
-  <li>깃헙
-    <br>https://github.com/
-    <br>파일 올려두면 누구든 어디서든 내 웹페이지 확인 가능
-  <li>비트나미
-    <br>https://bitnami.com/
-    <br>아파치(웹서버) 를 위해 까는 프로그램
-  <li>127.0.0.1
-    <br>자신의 컴퓨터 IP
-  <li>디스커스
-    <br>https://disqus.com/
-    <br>댓글 추가 코드 제공
-  <li>타크
-    <br>https://www.tawk.to/
-    <br>채팅 추가 코드 제공
-  <li>웹사이트 분석기
-    <br>https://analytics.google.com/
-</ol>
-</p>
+  </div>
+</div>
 
 <br><p>
   <div id="disqus_thread"></div>
