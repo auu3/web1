@@ -17,6 +17,15 @@
 </head>
 <body>
   <h1><a href="index.html">WEB</a></h1>
+  <input id="밤_낮" type="button" value="밤" onclick="
+  if(document.querySelector('#밤_낮').value === '밤'){
+    document.querySelector('body').style.backgroundColor = '#484a50';
+    document.querySelector('body').style.color = 'white';
+    document.querySelector('#밤_낮').value = '낮';}
+  else{
+    document.querySelector('body').style.backgroundColor = 'white';
+    document.querySelector('body').style.color = 'black';
+    document.querySelector('#밤_낮').value = '밤';}">
 
 <div id="grid">
   <ol>
@@ -46,6 +55,148 @@
       <br>
       <br>onclick의 속성 값은 자바스크립트
     </p>
+
+    <br>
+    <p><strong>200511</strong>
+      <br>script
+      <br>여기서부터 자바스크립트가 시작된다는걸 알려주는 HTML코드
+      <br>
+      <br>document.write('');
+      <br>이 문서에 적는다 라는 뜻
+      <br>자바스크립트로 페이지에 글을 쓸때 사용
+      <br>
+      <br>onclick
+      <br>버튼 이벤트
+      <br>
+      <br>"alert('')"
+      <br>경고창
+      <br>
+      <br>input type="text"
+      <br>텍스트입력이 가능한 상자
+      <br>
+      <br>onchange="alert('changed')"
+      <br>텍스트내용의 변화를 체크하는 이벤트
+      <br>
+      <br>웹페이지 우클 - 검사 - Console
+      <br>파일없이 자바스크립트 코드 사용가능
+      <br>
+      <br>콘솔창에 글을 쓰고 글을 따옴표로 묶은 다음
+      <br>맨뒤에 .length를 붙이면 따옴표 안 글의 글자수를 알수있음
+    </p>
+
+    <br>
+    <p><strong>200515</strong>
+      <br>데이터타입(자료형)
+      <br>이번에 알아볼건 숫자, 문자열
+      <br>
+      <br>산술연산자
+      <br>+더하기
+      <br>*곱하기
+      <br>/나누기
+      <br>-빼기
+      <br>
+      <br>문자
+      <br>"이렇게나" '이렇게'
+      <br>
+      <br>1+1
+      <br>=2
+      <br>
+      <br>"1+1"
+      <br>=11
+      <br>
+      <br>문자열인지 숫자인지에따라 결과가 달라지니까 항상 신경쓰고 조심해야
+    </p>
+
+    <br>
+    <p><strong>200527</strong>
+      <br>= 대입연산자
+      <br>실행을 유보하고싶을땐 쉬프트+엔터
+      <br>
+      <br>변수를 사용할때는 변수앞에 var을 붙이는게 좋다
+    </p>
+
+    <br>
+    <p><strong>200604</strong>
+      <br>자바스크립트로 태그 선택하는 방법
+      <br>document.queryselector('태그')
+      <br>
+      <br>자바스크립트로 스타일태그 넣는 방법
+      <br>.style.
+      <br>
+      <br>백그라운드 컬러 넣고 폰트색바꾸고 낮까지 완성
+      <br>링크 색도 같이 바뀌면 좋을텐데
+    </p>
+
+    <br>
+    <p><strong>200605</strong>
+      <br>토글
+      <br>누르면 까매지고 다시누르면 하얘지는 방식
+      <br>
+      <br>비교 연산자
+      <br><ins>===</ins>
+      <br>동등 비교 연산자, 이항 연산자
+      <br>이것과 === 이것은 같은가?
+      <br>같다면 true
+      <br>다르다면 false
+      <br>결과값을 뭉뚱그려서 Boolean 블리언이라고 부름
+      <br>
+      <br><ins>&lt;, &gt;</ins>
+      <br>이것이 &lt; 이것보다 작은가?
+      <br>맞다면 true
+      <br>그렇지 않다면 false
+      <br>반대의 경우에도 같으니 생략
+      <br>
+      <br>
+      <br><b>IF 조건문</b>
+      <br>조건문 뒤 괄호안에는 블리언 데이터타입이 들어감
+      <br>만약 frue가 들어와있다면
+      <br>첫번째 중괄호에 있는 코드들이 실행되고 두번째 중괄호는 무시됨
+      <br>
+      <br>만약 false가 들어와있다면
+      <br>첫번째 중괄호에 있는 코드들이 무시되고 else안에 코드들이 실행됨
+      <br>
+      <br>블리언의 값이 무엇인가에 따라 실행되는 코드가 바뀜
+      <br>
+      <br>조건문으로 만든것이
+
+      <input id="밤_낮" type="button" value="밤" onclick="
+      if(document.querySelector('#밤_낮').value === '밤'){
+        document.querySelector('body').style.backgroundColor = '#484a50';
+        document.querySelector('body').style.color = 'white';
+        document.querySelector('#밤_낮').value = '낮';}
+      else{
+        document.querySelector('body').style.backgroundColor = 'white';
+        document.querySelector('body').style.color = 'black';
+        document.querySelector('#밤_낮').value = '밤';
+      }
+      ">
+      <br>조건문이 아닌것이
+
+      <input type="button" value="밤" onclick="
+      document.querySelector('body').style.backgroundColor = '#484a50';
+      document.querySelector('body').style.color = 'white';
+      ">
+      <input type="button" value="낮" onclick="
+      document.querySelector('body').style.backgroundColor = 'white';
+      document.querySelector('body').style.color = '#484a50';
+      ">
+      <br>
+      <br>
+      <br><a href="https://youtu.be/vwRkFRke7ls" target="_blank"
+      title="WEB2 JavaScript - 18.리팩토링 중복의 제거" class="link">
+      <b>WEB2 JavaScript - 18.리팩토링 중복의 제거</b></a>
+      <br>리팩토링
+      <br>복잡한 코드를 정리하는것
+      <br>이것을 틈틈히 해줘야 좋은 프로그램이 만들어짐
+      <br>
+      <br>아 솔직하게 이제 머리 안돌아감
+      <br>지금 시간 04:22
+      <br>자고일어나서하든가
+      <br>뭐다음에하든가 하겠음
+      <br>아님 안본 CSS영상을보든가 암튼
+      <br>다시켜면 this설명부터
+    </p>
+
 
   </div>
 </div>
