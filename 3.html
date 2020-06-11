@@ -17,30 +17,52 @@
 </head>
 <body>
   <h1><a href="index.html">WEB</a></h1>
-  <input id="밤_낮" type="button" value="밤" onclick="
-  if(document.querySelector('#밤_낮').value === '밤'){
-    document.querySelector('body').style.backgroundColor = '#484a50';
-    document.querySelector('body').style.color = 'white';
-    document.querySelector('#밤_낮').value = '낮';}
-  else{
-    document.querySelector('body').style.backgroundColor = 'white';
-    document.querySelector('body').style.color = 'black';
-    document.querySelector('#밤_낮').value = '밤';}">
+
+  <script>
+    function nightDayHandler(self){
+      var target = document.querySelector('body');
+      if(self.value === '밤'){
+        target.style.backgroundColor = '#42474c';
+        target.style.color = 'white';
+        self.value = '낮';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i < alist.length){
+          alist[i].style.color = '#bdd5d5';
+          i = i + 1;
+        }
+      } else {
+        target.style.backgroundColor = 'white';
+        target.style.color = 'black';
+        self.value = '밤';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i < alist.length){
+          alist[i].style.color = 'black';
+          i = i + 1;
+        }}}
+  </script>
+  <input type="button" value="밤" onclick="
+    nightDayHandler(this);
+    ">
 
 <div id="grid">
-  <ol>
-      <li><a href="1.html">HTML</a></li>
-      <li><a href="2.html">CSS</a></li>
-      <li><a href="3.html">JavaScript</a></li>
-      <li><a href="checkbox.html">체박부터 부록까지</a></li>
-    <br>
-    <ul>
-      <li><a href="1-1.html">HTML정리</a></li>
-    </ul>
+    <ol>
+        <li><a href="1.html">HTML</a></li>
+        <li><a href="2.html">CSS</a></li>
+        <li><a href="3.html">JavaScript</a></li>
+        <li><a href="checkbox.html">체박부터 부록까지</a></li>
+      <br>
+      <ul>
+        <li><a href="1-1.html">HTML정리</a></li>
+      </ul>
     </ol>
-<div id="article">
+    <div id="article">
     <h2 style="font-size: 27px;">JavaScript</h2>
 
+  <p>
     <br>
     <p><strong>200507</strong>
       <br><a href="https://youtu.be/dPRtcRwKo-Y" target="_blank"
@@ -87,7 +109,7 @@
     <br>
     <p><strong>200515</strong>
       <br>데이터타입(자료형)
-      <br>이번에 알아볼건 숫자, 문자열
+      <br>숫자, 문자열
       <br>
       <br>산술연산자
       <br>+더하기
@@ -110,7 +132,6 @@
     <br>
     <p><strong>200527</strong>
       <br>= 대입연산자
-      <br>실행을 유보하고싶을땐 쉬프트+엔터
       <br>
       <br>변수를 사용할때는 변수앞에 var을 붙이는게 좋다
     </p>
@@ -122,15 +143,12 @@
       <br>
       <br>자바스크립트로 스타일태그 넣는 방법
       <br>.style.
-      <br>
-      <br>백그라운드 컬러 넣고 폰트색바꾸고 낮까지 완성
-      <br>링크 색도 같이 바뀌면 좋을텐데
     </p>
 
     <br>
     <p><strong>200605</strong>
       <br>토글
-      <br>누르면 까매지고 다시누르면 하얘지는 방식
+      <br>누르면 변하는 방식
       <br>
       <br>비교 연산자
       <br><ins>===</ins>
@@ -144,57 +162,190 @@
       <br>이것이 &lt; 이것보다 작은가?
       <br>맞다면 true
       <br>그렇지 않다면 false
-      <br>반대의 경우에도 같으니 생략
       <br>
-      <br>
-      <br><b>IF 조건문</b>
+      <br><ins>IF 조건문</ins>
       <br>조건문 뒤 괄호안에는 블리언 데이터타입이 들어감
       <br>만약 frue가 들어와있다면
       <br>첫번째 중괄호에 있는 코드들이 실행되고 두번째 중괄호는 무시됨
       <br>
       <br>만약 false가 들어와있다면
       <br>첫번째 중괄호에 있는 코드들이 무시되고 else안에 코드들이 실행됨
-      <br>
-      <br>블리언의 값이 무엇인가에 따라 실행되는 코드가 바뀜
-      <br>
-      <br>조건문으로 만든것이
+    </p>
 
-      <input id="밤_낮" type="button" value="밤" onclick="
-      if(document.querySelector('#밤_낮').value === '밤'){
-        document.querySelector('body').style.backgroundColor = '#484a50';
-        document.querySelector('body').style.color = 'white';
-        document.querySelector('#밤_낮').value = '낮';}
-      else{
-        document.querySelector('body').style.backgroundColor = 'white';
-        document.querySelector('body').style.color = 'black';
-        document.querySelector('#밤_낮').value = '밤';
-      }
-      ">
-      <br>조건문이 아닌것이
-
-      <input type="button" value="밤" onclick="
-      document.querySelector('body').style.backgroundColor = '#484a50';
-      document.querySelector('body').style.color = 'white';
-      ">
-      <input type="button" value="낮" onclick="
-      document.querySelector('body').style.backgroundColor = 'white';
-      document.querySelector('body').style.color = '#484a50';
-      ">
-      <br>
-      <br>
+    <br>
+    <p><strong>200606</strong>
       <br><a href="https://youtu.be/vwRkFRke7ls" target="_blank"
       title="WEB2 JavaScript - 18.리팩토링 중복의 제거" class="link">
-      <b>WEB2 JavaScript - 18.리팩토링 중복의 제거</b></a>
+      WEB2 JavaScript - 18.리팩토링 중복의 제거</a>
       <br>리팩토링
-      <br>복잡한 코드를 정리하는것
-      <br>이것을 틈틈히 해줘야 좋은 프로그램이 만들어짐
+      <br>복잡한 코드를 간단하게 정리하는것
       <br>
-      <br>아 솔직하게 이제 머리 안돌아감
-      <br>지금 시간 04:22
-      <br>자고일어나서하든가
-      <br>뭐다음에하든가 하겠음
-      <br>아님 안본 CSS영상을보든가 암튼
-      <br>다시켜면 this설명부터
+      <br>this
+      <br>자기 자신을 가리키는 표현
+      <br>
+      <br>var target = ;
+      <br>타겟을 정하는 변수
+    </p>
+
+    <br>
+    <p><strong>200607</strong>
+      <br>배열, array ['']
+      <br>["여러가지 가능", "쉼표로 구분함"]
+      <br>
+      <br>var coworkers = [ ];
+      <br>배열을 담는 변수
+      <br>
+      <br>document.write(coworkers[ ]);
+      <br>변수안의 배열을 꺼내는 방법
+      <br>
+      <br>['여러가지', '변수가', '있을때'] 첫번째 자리 변수를 꺼내고싶다면
+      <br>document.write(coworkers[0]);
+      <br>
+      <br>이 배열의 목록을 인덱스라고 부름
+      <br>
+      <br>coworkers.push('');
+      <br>변수를 추가하는 방법
+      <br>
+      <br>document.write(coworkers.length);
+      <br>변수가 총 몇개인지 알수있는 방법
+      <br>
+      <br>
+      <br><a href="https://youtu.be/ZupPmuWPSdE" target="_blank"
+      title="WEB2 JavaScript - 21.반복문" class="link">WEB2 JavaScript - 21.반복문</a>
+      <br>반복문, loop
+      <br>
+      <br>while(true/false){
+      <br>반복문의 기본 문법
+      <br>}
+      <br>
+      <br>괄호안이 true인 동안에는 중괄호안에있는 코드들이 반복적으로 실행되고
+      <br>괄호안이 false가 될때 반복을 멈춤
+      <br>
+      <br>만약 내가 이 두줄의 코드를 세번 반복시키고싶다 하면
+      <br>while(){
+      <br>document.write('하나');
+      <br>document.write9('둘');}
+      <br>우선 변수 i를 통해 이 코드가 몇번 실행됐는지를 적어둘 필요가있음
+      <br>
+      <br><ins>var i = 0;</ins>
+      <br>while(){
+      <br>document.write('하나');
+      <br>document.write9('둘');
+      <br><ins>i = i + 1;</ins> }
+      <br>
+      <br>변수 i는 0에서 시작해서 한번 반복될때마다 1씩 더해질거고
+      <br>세번 반복되려면 i는 3이 되면됨
+      <br>
+      <br>var i = 0;
+      <br>while<ins>(i < 3)</ins>{
+      <br>document.write('하나');
+      <br>document.write9('둘');
+      <br>i = i + 1; }
+      <br>
+      <br>완성
+    </p>
+
+    <br>
+    <p><strong>200610</strong>
+      <br><a href="https://youtu.be/BjkfkKdlvLo" target="_blank"
+      title="WEB2 JavaScript - 22.배열과 반복문" class="link">
+      WEB2 JavaScript - 22.배열과 반복문</a>
+      <br>
+      <br>' ', " " 문자열
+      <br>++ 문자, 함수
+      <br>
+      <br>var coworkers = ['0','1','2','3'];
+      <br>var i = 0;
+      <br>while(i < <ins>coworkers.length</ins>){
+      <br>document.write('< il>'+coworkers[i]+'< /il>');
+      <br>i = i + 1;}>
+      <br>coworkers.length를 쓰면 배열이 바뀔때마다 숫자를 일일히 수정하지않아도됨
+      <br>
+      <br>링크넣는방법
+      <br>document.write('< il>
+      <br>< a href="주소'+coworkers[i]+'">
+      <br>+coworkers[i]+'< /il>');
+      <br>
+      <br>배열이란 연관된 데이터들을 순서대로 잘 정리하는것
+      <br>반복문이란 정리된 데이터들을 하나씩 꺼내서 자동화 처리를 할수있는것
+      <br>
+      <br>
+      <br><a href="https://youtu.be/hZdBDoYHd7E" class="link" target="_blank"
+      title="WEB2 JavaScript - 23.배열과 반복문의 활용">
+      WEB2 JavaScript - 23.배열과 반복문의 활용</a>
+      <br>
+      <br>쉬프트+엔터를 누르면 실행되지않고 줄바꿈만됨
+      <br>
+      <br>console.log();
+      <br>괄호안에있는 결과가 웹페이지 콘솔창에 출력됨
+      <br>
+      <br>
+      <br><a href="https://youtu.be/IOuePUzLdnQ" target="_blank" title="WEB2 JavaScript - 25.함수"
+      class="link">WEB2 JavaScript - 25.함수</a>
+      <br>
+      <br>함수, function
+      <br>하나의 단위로 실행되는 문의 집합
+      <br>
+      <br>입력, Parameter, 매개변수
+      <br>인자, Argument
+      <br>출력, Return
+      <br>
+      <br>// 주석
+      <br>
+      <br><a href="https://youtu.be/MXf9UqMXuGM" target="_blank" title="WEB2 JavaScript - 26.함수 : 매개변수와 인자"
+      class="link">WEB2 JavaScript - 26.함수 : 매개변수와 인자</a>
+      <br><a href="https://youtu.be/6MzCHO8M3Uc" target="_blank" title="WEB2 JavaScript - 27.함수 (리턴)"
+      class="link">WEB2 JavaScript - 27.함수 (리턴)</a>
+      <br><a href="https://youtu.be/WsPJ8FsoMcU" target="_blank" title="WEB2 JavaScript - 28.함수의 활용"
+      class="link">WEB2 JavaScript - 28.함수의 활용</a>
+      <br>
+      <br>따라는하는데 이해가안감 걍존나돌려봐그냥
+    </p>
+  </p>
+
+    <br>
+    <p><strong></strong>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
     </p>
 
 
@@ -207,36 +358,37 @@
   <script>
 
 /**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-/*
-var disqus_config = function () {
-this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-*/
+  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+  /*
+  var disqus_config = function () {
+  this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+  };
+  */
 (function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://web1-nratpu0aek.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</p>
+  var d = document, s = d.createElement('script');
+  s.src = 'https://web1-nratpu0aek.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </p>
 
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/5ea39ba935bcbb0c9ab47402/default';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/5ea39ba935bcbb0c9ab47402/default';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
 <!--End of Tawk.to Script-->
+
 </body>
 </html>
