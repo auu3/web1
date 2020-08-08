@@ -4,150 +4,100 @@
   <title>WEB1 - HTML</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-164553945-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-164553945-1');
-</script>
 
 </head>
 <body>
   <h1><a href="index.html">WEB</a></h1>
-
 <div id="grid">
-  <ol>
-      <li><a href="1.html">HTML</a></li>
-      <li><a href="2.html">CSS</a></li>
-      <li><a href="3.html">JavaScript</a></li>
-      <li><a href="checkbox.html">체박부터 부록까지</a></li>
-    <br>
-    <ul>
-      <li><a href="1-1.html">HTML정리</a></li>
-    </ul>
-    </ol>
-  <div id="article">
-      <h2 style="font-size: 27px;">HTML</h2>
-
-      <br>
-      <p><strong>190929</strong>
-        <br>시작
-        <br>제목 <u>밑줄</u> <strong>강조</strong>
-      </p>
-
-      <br>
-      <p><strong>190930</strong>
-        <br>이틀째
-        <br>오늘은 줄바꿈태그랑 단락태그 br, p /p
-      </p>
-
-      <br>
-      <p><strong>191013</strong>
-        <br>오늘은 이미지태그를 배울거임
-        <br>< img src="" >
-        <br>사진크기 조절은 width으로 가능 숫자나 %로
-        <br><img src="coding.jpg"width="700">
-        <br>scr="이미지 주소" 주소는 인터넷 이미지 우클릭 이미지 주소복사나
-        <br>같은폴더에 있는 이미지라면 에스알씨 속성값으로 이미지파일 이름만적어도 가능
-      </p>
-
-      <br>
-      <p><strong>191019</strong>
-        <br>오늘배운거
-        <br>숫자붙은 부모는 ol 숫자없는 부모는 ul
-        <br>자식은 li
-        <br>끗
-      </p>
-
-      <br>
-      <p><strong>191020</strong>
-        <br>title /title
-        <br>타이틀태그를 쓰면 태그로 감싸진말이 제목이됨
-        <br>그리고 글자가 깨질수도있음 그럴땐 파일 여는 방식이 잘못된거임
-        <br>지금이거는 utf-8이란걸로 만들어진거니까 열때도 그래야함 그걸 어떻게알려주냐면
-        <br>< meta charset="utf-8" >이렇게 메타태그로 알려줌
-        <br>글고 몸통부분은 body /body 머리는 head /head 태그로 크게 묶음
-        <br>글고 그 머리위에 쓰는태그가 !doctype html html로 만들엇단 의미임
-      </p>
-
-      <br>
-      <p><strong>191218</strong>
-        <br>오늘은 링크를 배울거임 a /a
-        <br>일단 붙여넣고 싶은 링크를 복사하고 a뒤에 href를 적음
-        <br>그리고 그 뒤 =에 링크를 붙여넣으면 됨
-        <br>
-        <br><a href="https://youtu.be/V3pkC1hE-as" class="link">1</a>
-        <br>이제 글자에 링크걸렸고 이동도됨
-        <br>근데 만약에 클릭했을때 새탭으로 열리게하고싶어 그러 링크뒤에 target="_blank"해주면됨
-        <br><br><a href="https://youtu.be/V3pkC1hE-as" target="_blank" class="link">2</a>
-        <br>근데 또 만약에 저기 저 링크를 클릭하기전에 무슨링크인지 알수있게 툴팁을띄워주고싶다하면
-        <br>링크 뒤에 타겟 뒤에 title="" 해주면됨
-        <br><br><a href="https://youtu.be/V3pkC1hE-as" target="_blank" title="유툽" class="link">3</a>
-        <br>끝
-      </p>
-
-      <br>
-      <p><strong>191220</strong>
-        <br>오늘은 제목도 달고 목차에 링크도 달거임
-      </p>
-
-      <br>
-      <p><strong>200102</strong>
-        <br>2020..
-        <br>오늘은 깃헙에 가입했음
-        <br>이제 폰에서도 볼수있다
-      </p>
-
-      <br>
-      <p><strong>200317</strong>
-        <br><a href="https://youtu.be/bTSDDyuMuUo" target="_blank"
-        title="WEB1 - 20. 수업을 마치며 1/3" class="link">WEB1 - 20. 수업을 마치며 1/3</a>
-        <br>수업을 마치며.....
-        <br>고생했다
-      </p>
-
-    </div>
-  </div>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="colors.js"></script>
+  <input type="button" style=" width: 30px; height:30px;"
+    value="밤"
+  onclick="nightDayHandler(this);">
   <br>
-  <p>
-    <div id="disqus_thread"></div>
-  <script>
+  <ol>
+    <li><a href="1.html">HTML</a></li>
+    <li><a href="2.html">CSS</a></li>
+    <li><a href="3.html">JavaScript</a></li>
+  </ol>
 
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-/*
-var disqus_config = function () {
-this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-*/
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://web1-nratpu0aek.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</p>
+  <div id="article">
+    <h2 style="font-size: 30px;">HTML</h2>
+    <br>
+    <p><strong>190929~200317</strong>
+        <br>
+        <br>주석 < !-- -->
+        <br>
+        <br>강조 strong /strong
+        <br>
+        <br>밑줄 u /u
+        <br>
+        <br>제목 h1 ~ h6 /h1 ~ h6
+        <br>
+        <br>줄바꿈 br
+        <br>
+        <br>단락 p /p
+        <br>
+        <br>이미지 img src="(인터넷 이미지 주소, 이미지파일 이름)"
+        <br>이미지 크기 수정 width="숫자, %"
+        <br>
+        <br>목록
+        <br>부모
+        <br>- 숫자없음 ul /ul
+        <br>- 숫자있음 ol /ol
+        <br>자식
+        <br>- li /li
+        <br>
+        <br>타이틀 title /title
+        <br>
+        <br>메타태그 >meta charset=""
+        <br>
+        <br>몸통, 본문 body /body
+        <br>
+        <br>머리, 본문설명 head /head
+        <br>
+        <br>최고카테고리 html /html
+        <br>
+        <br>html인 문서를 나타냄 !doctype html
+        <br>
+        <br>링크 a href="주소" /a
+        <br>새탭 target="_blank"
+        <br>툴팁 title=""
+        <br>
+        <br>체크박스 input type="checkbox"
+        <br>
+        <br>동영상 iframe width="가로" height="세로" src="링크" /iframe
+    </p>
+    <br>
+    <p><strong>사이트</strong>
+      <br>
+        <br>깃허브
+        <br><a href="https://github.com/" target="_blank" title="https://github.com/"
+        class="link">https://github.com/</a>
+        <br>파일공유
+        <br>
+        <br>비트나미
+        <br><a href="https://bitnami.com/" target="_blank" title="https://bitnami.com/"
+        class="link">https://bitnami.com/</a>
+        <br>아파치, 웹서버 보조 프로그램
+        <br>본인 컴퓨터 IP - 127.0.0.1
+        <br>
+        <br>디스커스
+        <br><a href="https://disqus.com/" target="_blank" title="https://disqus.com/"
+        class="link">https://disqus.com/</a>
+        <br>댓글 추가 코드 제공
+        <br>
+        <br>타크
+        <br><a href="https://www.tawk.to/" target="_blank" title="https://www.tawk.to/"
+        class="link">https://www.tawk.to/</a>
+        <br>채팅 추가 코드 제공
+        <br>
+        <br>웹사이트 분석
+        <br><a href="https://analytics.google.com/" target="_blank" title="https://analytics.google.com/"
+        class="link">https://analytics.google.com/</a>
+        </p>
+  </div>
+</div>
 
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/5ea39ba935bcbb0c9ab47402/default';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
 </body>
 </html>
